@@ -1,5 +1,4 @@
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 // define your suffixes by yourself..
 // here we use active, big, small, very-big..
@@ -30,7 +29,6 @@ const iconsLoaded = new Promise((resolve, reject) => {
     }),
   ).then((sources) => {
     Object.keys(icons).forEach((iconName, idx) => (iconsMap[iconName] = sources[idx]));
-
     // Call resolve (and we are done)
     resolve(true);
   });

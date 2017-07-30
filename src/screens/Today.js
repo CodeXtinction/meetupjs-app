@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, FlatList, View, Linking, StatusBar, RefreshControl } from 'react-native';
+import { StyleSheet, FlatList, View, Linking, StatusBar } from 'react-native';
 import { inject, observer } from 'mobx-react/native';
+import * as Animatable from 'react-native-animatable';
 
 import Constants from '../global/Constants';
 
 import Card from '../components/Card';
 import HeaderList from '../components/HeaderList';
+import EmptyList from '../components/EmptyList';
 
 const propTypes = {
   events: PropTypes.object.isRequired,
@@ -35,18 +37,22 @@ class Today extends Component {
     const { refreshing } = this.props.events;
 
     return (
-      <View style={s.container}>
+      <Animatable.View
+        style={s.container}
+        animation="fadeIn"
+        useNativeDriver
+        easing="ease-out"
+        duration={275}
+      >
         <FlatList
           ListHeaderComponent={() => <HeaderList title="Hoy" />}
+          ListEmptyComponent={() => <EmptyList />}
           style={s.list}
           data={events.todayList}
           renderItem={({ item }) => <Card item={item} onPress={this.openLink} />}
           keyExtractor={item => item.eventLink}
-          refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={() => events.getEvents()} />
-          }
         />
-      </View>
+      </Animatable.View>
     );
   }
 }
@@ -61,5 +67,6 @@ const s = StyleSheet.create({
     marginHorizontal: 10,
   },
 });
+
 Today.wrappedComponent.propTypes = propTypes;
 export default Today;

@@ -36,13 +36,13 @@ class Store {
     });
   }
 
-  // data for sectionlist
+  // data para sectionlist
   @computed
   get dataSource() {
     return toJS(this.events);
   }
 
-  // filtered data for FlatList
+  // filtro hoy para FlatList
   @computed
   get todayList() {
     return this.filterToday(this.dataSource);

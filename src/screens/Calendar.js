@@ -34,7 +34,7 @@ class Calendar extends Component {
           renderSectionHeader={({ section }) => <HeaderSection title={section.title} />}
           sections={events.dataSource}
           keyExtractor={item => item.eventLink}
-          initialNumToRender={5}
+          initialNumToRender={8}
           style={s.list}
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={() => events.getEvents()} />

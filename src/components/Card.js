@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Animatable from 'react-native-animatable';
 
 const propTypes = {
   item: PropTypes.object.isRequired,
@@ -16,7 +17,13 @@ function Card({ item, onPress }) {
   const { date, eventName, place, eventLink } = item;
   return (
     <TouchableNativeFeedback onPress={() => onPress(eventLink)}>
-      <View style={[s.container]}>
+      <Animatable.View
+        style={[s.container]}
+        animation="fadeInUp"
+        useNativeDriver
+        easing="ease-out"
+        duration={275}
+      >
         <View style={s.timeWrapper}>
           <View style={[s.time, {}]}>
             <Text style={s.timeLabel}>
@@ -35,7 +42,7 @@ function Card({ item, onPress }) {
             {`  ${place}`}
           </Text>
         </View>
-      </View>
+      </Animatable.View>
     </TouchableNativeFeedback>
   );
 }

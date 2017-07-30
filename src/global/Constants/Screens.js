@@ -1,3 +1,4 @@
+// registro de pantallas
 export const Screens = {
   TODAY_TAB: {
     screen: 'meetup.Today',
@@ -17,28 +18,11 @@ export const Screens = {
   },
 };
 
-// experimentando con tabs bottom per ya fue lol
+// opciones por pantalla individual
 export const screenOpts = {
-  TODAY: {
-    // navBarTextFontFamily: 'rubik_medium',
-    // navBarTextFontSize: 18,
-    // navBarTextColor: '#000',
-    // collapsingToolBarCollapsedColor: '#FFCA28',
-    // collapsingToolBarImage: 'http://lorempixel.com/400/200/',
-    // collapsingToolBarComponent: 'meetup.HeaderToday',
-    // topBarElevationShadowEnabled: false,
-  },
-  CALENDAR: {
-    // navBarTextFontFamily: 'rubik_medium',
-    // navBarTextFontSize: 18,
-    // navBarTextColor: '#000',
-    // collapsingToolBarCollapsedColor: '#FFCA28',
-    // collapsingToolBarComponent: 'meetup.Header',
-    // topBarElevationShadowEnabled: false,
-  },
-  FOLLOW: {
-    // navBarHidden: true,
-  },
+  TODAY: {},
+  CALENDAR: {},
+  FOLLOW: {},
   CONTAINER: {
     navBarHideOnScroll: true,
     statusBarColor: '#4d394b',
