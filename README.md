@@ -11,11 +11,11 @@ React Native app usando el servicio [calendar-api](http://calendar-api.now.sh/)
 <img src="https://k61.kn3.net/25CAC2076.png" width="240">&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://k60.kn3.net/0F5D5B12A.png" width="240">
 
-## Descarga
+## Download APK
 
 [ANDROID](https://drive.google.com/file/d/0B6M2U3Sh1XvfYjBMVmdrLWxVWGM/view?usp=sharing)
 
-## Setup
+## Desarrollo
 
 1. **Clonar repo**
 
