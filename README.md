@@ -35,8 +35,3 @@ React Native app usando el servicio [calendar-api](http://calendar-api.now.sh/)
   ```
 
 
-## IMPORTANTE
-
-Solo android, el que quiera hacer la version de iOS is welcome.
-Cuando pueda lo subo a la PlayStore.
-
